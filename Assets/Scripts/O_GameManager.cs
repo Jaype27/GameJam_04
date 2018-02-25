@@ -25,7 +25,7 @@ public class O_GameManager : MonoBehaviour {
         }
         DontDestroyOnLoad(this.gameObject);
 	}
-
+	
 	 void Start () {
         m_lives = 3;
         m_Gold = 0;
@@ -41,6 +41,17 @@ public class O_GameManager : MonoBehaviour {
 		if (m_Gold >= nextLife) {
 			nextLife = nextLife*2;
 			m_lives++;
+		}
+
+	}
+
+	void OnCollisonEnter(Collider other) {
+		Debug.Log("Just Touched: " + other.name);
+
+		if (other.gameObject.tag == "Cannon" || other.gameObject.tag == "Enemy"){
+			Destroy(other.gameObject);
+		} else {
+			
 		}
 	}
 }
