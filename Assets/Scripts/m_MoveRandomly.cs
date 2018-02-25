@@ -14,14 +14,17 @@ public class m_MoveRandomly : MonoBehaviour {
 
 	void Start ()
 	{
+		
 		navMeshAgent = GetComponent<NavMeshAgent>();
 		path = new NavMeshPath();
 	}
 
 	void Update ()
-	{
-		if(!inCoRoutine)
+	{	
+	
+		if(!inCoRoutine){
 			StartCoroutine(DoSomething());
+		}
 	}
 
 	Vector3 getNewRandomPosition ()

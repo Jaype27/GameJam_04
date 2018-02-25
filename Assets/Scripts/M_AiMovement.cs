@@ -40,7 +40,8 @@ public class M_AiMovement : MonoBehaviour {
 		float Distance = Vector3.Distance(transform.position, fpsTarget.position);
 		if (Distance<enemyLookDistance){
 			randomMoveScript.enabled = false;
-		}
+			Debug.Log("I see u");
+		} 
 	}
 
 	void lookAtPlayer(){
