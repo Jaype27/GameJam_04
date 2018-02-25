@@ -16,19 +16,18 @@ public class CannonballBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		Destroy (this.gameObject, 1f);
 	}
 
 	void OnCollisionEnter2D (Collision2D other) {
 		
-		if (isPlayerShooting = true) {
+		if (isPlayerShooting == true) {
 			if (other.gameObject.tag == "Enemy") {
 				O_GameManager.AddPoints(killPoints);
 				Destroy (other.gameObject);
+				Destroy (this.gameObject);
 			}
 		}
-			
-		Destroy (gameObject);
 	}
 	
 }
