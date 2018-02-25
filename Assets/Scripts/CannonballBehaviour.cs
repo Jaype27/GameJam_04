@@ -5,6 +5,7 @@ using UnityEngine;
 public class CannonballBehaviour : MonoBehaviour {
 
 	public bool isPlayerShooting;
+	public int killPoints;
 	
 	
 	
@@ -20,10 +21,13 @@ public class CannonballBehaviour : MonoBehaviour {
 
 	void OnCollisionEnter2D (Collision2D other) {
 		
-		if (other.gameObject.tag == "Enemy") {
-		Destroy (other.gameObject);
+		if (isPlayerShooting = true) {
+			if (other.gameObject.tag == "Enemy") {
+				O_GameManager.AddPoints(killPoints);
+				Destroy (other.gameObject);
+			}
 		}
-		
+			
 		Destroy (gameObject);
 	}
 	

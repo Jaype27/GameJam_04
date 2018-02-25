@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class O_GameManager : MonoBehaviour {
 
-	private int m_Gold;
+	public static int m_Gold;
 	public Text m_goldUIText;
 	public Text m_nextLifeUIText;
 	public Text m_LivesUIText;
@@ -53,5 +53,10 @@ public class O_GameManager : MonoBehaviour {
 		} else {
 			
 		}
+	}
+
+
+	public static void AddPoints(int pointsToAdd) {
+		m_Gold += pointsToAdd;
 	}
 }
