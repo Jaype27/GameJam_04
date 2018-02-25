@@ -6,11 +6,11 @@ public class Player : MonoBehaviour {
 
 public float m_rotateSpeed = 10.0f; 
 public float m_moveSpeed = 10.0f;
-private Rigidbody2D m_rb;
+private Rigidbody m_rb;
 int test;
 	
 	void Awake () {
-		m_rb = GetComponent<Rigidbody2D>(); 
+		m_rb = GetComponent<Rigidbody>(); 
 	}
 
 	void Update () {
@@ -21,5 +21,7 @@ int test;
 		if (Input.GetAxis("Horizontal") != 0) {
 			transform.Rotate(0, 0, -m_rotateSpeed * Time.deltaTime * Input.GetAxis("Horizontal"));
 		}
+
+		
 	}
 }
