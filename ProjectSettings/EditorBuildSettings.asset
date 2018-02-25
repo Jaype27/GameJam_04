@@ -6,5 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Tristin.unity
-    guid: b3c235627e555714cb6b213ab35b56f2
+    path: Assets/Scenes/MainMenu.unity
+    guid: f4dc51d129afd354c9ace40ba7ae0c52
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: 8f2958a1d8c8c8f4bb07844a47ce51fa
+  - enabled: 1
+    path: Assets/Scenes/ScoreMenu.unity
+    guid: c7af8c55450438b41b73483dd87a5e5e
