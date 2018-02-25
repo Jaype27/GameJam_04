@@ -8,6 +8,7 @@ public class O_GameManager : MonoBehaviour {
 	private int m_Gold;
 	public Text m_goldUIText;
 	public Text m_nextLifeUIText;
+	public Text m_LivesUIText;
 
 	private int nextLife = 200;
 	private int m_lives;
@@ -28,7 +29,6 @@ public class O_GameManager : MonoBehaviour {
 	 void Start () {
         m_lives = 3;
         m_Gold = 0;
-        Debug.Log(m_lives);
     }
 	
 	// Update is called once per frame
@@ -37,6 +37,7 @@ public class O_GameManager : MonoBehaviour {
 		Debug.Log(m_Gold);
 		m_goldUIText.text = (int)Mathf.Floor(m_Gold) + " Gold";
 		m_nextLifeUIText.text= " " + (int)Mathf.Floor(nextLife);
+		m_LivesUIText.text= " " + (int)Mathf.Floor(m_lives);
 		if (m_Gold >= nextLife) {
 			nextLife = nextLife*2;
 			m_lives++;
