@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class M_AiMovement : MonoBehaviour {
 	
-
+	// Change for update
 	public float fpsTargetDistance;
 	public float enemyLookDistance;
 	public float attackDistance;
