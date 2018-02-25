@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class M_AiMovement : MonoBehaviour {
-	/* 
+	
 
 	public float fpsTargetDistance;
 	public float enemyLookDistance;
@@ -47,5 +47,5 @@ public class M_AiMovement : MonoBehaviour {
 		theRigidbody.AddForce(transform.forward*enemyMovementSpeed);
 	}
 
-*/
+
 }
