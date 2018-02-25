@@ -35,13 +35,9 @@ public class O_GameManager : MonoBehaviour {
 	void Update () {
 		m_Gold += 1;
 		m_goldUIText.text = (int)Mathf.Floor(m_Gold) + " Gold";
-		m_nextLifeUIText.text= " " + (int)Mathf.Floor(nextLife);
-<<<<<<< HEAD
-		m_LivesUIText.text= " " + (int)Mathf.Floor(m_lives);
-=======
-		m_LivesUIText.text = ""+(int)Mathf.Floor(m_lives);
-
->>>>>>> master
+		m_nextLifeUIText.text = " " + (int)Mathf.Floor(nextLife);
+		m_LivesUIText.text = " " + (int)Mathf.Floor(m_lives);
+		
 		if (m_Gold >= nextLife) {
 			nextLife = nextLife*2;
 			m_lives++;
