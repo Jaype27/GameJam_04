@@ -14,7 +14,7 @@ public class M_AiMovement : MonoBehaviour {
 	Rigidbody theRigidbody;
 	Renderer myRender;
 
-
+	public m_MoveRandomly randomMoveScript;
 
 	// Use this for initialization
 	void Start () {
@@ -35,6 +35,11 @@ public class M_AiMovement : MonoBehaviour {
 		if(fpsTargetDistance<attackDistance){
 			attackPlease();
 			print("ATTACK!");
+		}
+
+		float Distance = Vector3.Distance(transform.position, fpsTarget.position);
+		if (Distance<enemyLookDistance){
+			randomMoveScript.enabled = false;
 		}
 	}
 
