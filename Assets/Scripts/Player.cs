@@ -7,6 +7,7 @@ public class Player : MonoBehaviour {
 public float m_rotateSpeed = 10.0f; 
 public float m_moveSpeed = 10.0f;
 private Rigidbody2D m_rb;
+int test;
 	
 	void Awake () {
 		m_rb = GetComponent<Rigidbody2D>(); 
