@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4290548580962508}
   - component: {fileID: 33307648808634788}
-  - component: {fileID: 135881597778079492}
   - component: {fileID: 23709644427396014}
   - component: {fileID: 114834767432870190}
+  - component: {fileID: 135994145111637450}
   m_Layer: 0
   m_Name: CannonBall
   m_TagString: Untagged
@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1183366702391818}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 122.57, y: 39.69, z: 132.52438}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
---- !u!135 &135881597778079492
+--- !u!135 &135994145111637450
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

@@ -25,9 +25,12 @@ public class m_ProjectileAI : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter(SphereCollider other){
+	void OnTriggerEnter (Collider other){
+		GameObject Manager = GameObject.Find("GameManager");
+		O_GameManager gamemanager = Manager.GetComponent<O_GameManager>();
 		if(other.CompareTag("Player")){
 			DestroyProjectile();
+			O_GameManager.MinusLives(1);
 		}
 	}
 

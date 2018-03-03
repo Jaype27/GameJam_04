@@ -11,7 +11,7 @@ public class CannonballBehaviour : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		
+		killPoints = 100;
 	}
 	
 	// Update is called once per frame
@@ -19,15 +19,17 @@ public class CannonballBehaviour : MonoBehaviour {
 		Destroy (this.gameObject, 1f);
 	}
 
-	void OnCollisionEnter2D (Collision2D other) {
-		
-		if (isPlayerShooting == true) {
+	void OnTriggerEnter (Collider other) {
+
+		GameObject Manager = GameObject.Find("GameManager");
+		O_GameManager gamemanager = Manager.GetComponent<O_GameManager>();
+
 			if (other.gameObject.tag == "Enemy") {
 				O_GameManager.AddPoints(killPoints);
 				Destroy (other.gameObject);
 				Destroy (this.gameObject);
+				gamemanager.spawnCount--;
 			}
-		}
 	}
 	
 }
